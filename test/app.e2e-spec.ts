@@ -43,6 +43,19 @@ describe('App e2e', () => {
       password: '123'
     };
     describe('Signup', () => {
+
+      it('should throw if email empty', () => {
+        return pactum
+          .spec()
+          .post(
+            '/auth/signup',
+          )
+          .withBody({
+            password: dto.password
+          })
+          .expectStatus(400)
+      })
+
       it('should signup', () => {
         return pactum
           .spec()
