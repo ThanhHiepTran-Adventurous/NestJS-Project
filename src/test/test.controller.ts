@@ -6,7 +6,7 @@ import { ApiBody, ApiOperation, ApiResponse, ApiTags } from "@nestjs/swagger";
 export class TestController {
 
     @Get('/getAll')
-    @ApiOperation({ summary: 'Get all data from this api' })
+    @ApiOperation({ summary: 'Get all data from this api for swagger' })
     @ApiResponse({
         status: 200,
         description: 'All Data list'
