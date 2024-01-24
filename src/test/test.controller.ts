@@ -23,7 +23,7 @@ export class TestController {
         return 'All Data list'
     }
 
-    @Post('/create')
+    @Post('/createNew')
     @ApiOperation({ summary: 'create new record' })
     @ApiBody({
         schema: {
